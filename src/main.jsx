@@ -11,6 +11,9 @@ import ComponenteTailblock from './components/ComponenteTailblock.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Hero from './components/Hero.jsx'
+import Statisc from './components/Statisc.jsx'
+import Step from './components/Step.jsx'
+import Testimonials from './components/Testimonials.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -30,7 +33,9 @@ createRoot(document.getElementById('root')).render(
     <Header />
     <ComponenteTailblock />
     <Hero />
-
+    <Statisc />
+    <Step />
+    <Testimonials />
     <Footer />
   </StrictMode>,
 )
