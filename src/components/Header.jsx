@@ -1,6 +1,9 @@
+import {NavLink} from "react-router-dom"
+
 const Header = () => {
 
-    const styleLinkNav = "mr-5 hover:text-gray-900"
+    const styleLinkNav = "mr-5 hover:text-gray-900 hover:text-black"
+    const estaActivo = "mr-5 text-gray-900 font-bold"
 
   return (
     <header className="text-gray-600 body-font">
@@ -12,10 +15,17 @@ const Header = () => {
             <span className="ml-3 text-xl">Tailblocks</span>
             </a>
             <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <a className={styleLinkNav}>First Link</a>
-            <a className={styleLinkNav}>Second Link</a>
-            <a className={styleLinkNav}>Third Link</a>
-            <a className={styleLinkNav}>Fourth Link</a>
+                <NavLink to="/" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>Inicio</NavLink>
+                <NavLink to="/componentes" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>Componentes</NavLink>
+                <NavLink to="/tailblock" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>TailBlock</NavLink>
+                <NavLink to="/programa" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>Programa</NavLink>
+                <NavLink to="/institucion"
+                    className={({isActive}) =>
+                        isActive
+                            ? estaActivo
+                            : styleLinkNav}>
+                    Inistitucion
+                </NavLink>
             </nav>
             <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">

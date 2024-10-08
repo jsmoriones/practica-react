@@ -1,14 +1,24 @@
-import Props from "./components/Props"
-import Repaso from "./components/Repaso";
+import { Routes, Route, Navigate } from "react-router-dom"
+
+import Inicio from "./pages/Inicio.jsx"
+import Tailblocks from './pages/Tailblocks.jsx'
+import Programa from './pages/Programa.jsx'
+import Institucion from './pages/Institucion.jsx'
+import Componentes from "./components/Componentes.jsx"
+import Header from "./components/Header.jsx"
 
 function App() {
   return (
     <>
-      <button className="rounded-full px-4 py-2 bg-regal-blue text-white text-lg font-bold">Save Changes</button>
-      <h2 className="text-primary text-2xl font-bold">Ejemplo 1</h2>
-      <h3 className="text-secondary text-2xl font-bold">Ejemplo 2</h3>
-      <Props name="Rider" cedula="11111111" />
-      <Repaso programa="ADSO" competencia="FrontEnd" />
+      <Header />
+      <Routes>
+        <Route path='/' element={<Inicio />} />
+        <Route path='/componentes' element={<Componentes />} />
+        <Route path='/tailblock' element={<Tailblocks />} />
+        <Route path='/programa' element={<Programa />} />
+        <Route path='/institucion' element={<Institucion />} />
+        <Route path="*" element={<Navigate to="/" />} /> {/*Redirecciona al inicio en caso ingresar a una ruta inexistente*/}
+      </Routes>
     </>
   )
 }
