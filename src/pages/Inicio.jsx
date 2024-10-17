@@ -1,4 +1,10 @@
+import { useContext } from "react"
+import { ContextCounter } from "../context/Context";
+
 const Inicio = () => {
+
+  const {reset, counter} = useContext(ContextCounter);
+
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
@@ -19,6 +25,11 @@ const Inicio = () => {
           <button className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
           <p className="text-xs text-gray-500 mt-3">Literally you probably havent heard of them jean shorts.</p>
         </div>
+      </div>
+      <div className="block mt-10">
+        <h3 className="h3">useContext</h3>
+        <h4 className="h4">Counter useContext: {counter}</h4>
+        <button onClick={reset} className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">reset</button>
       </div>
     </section>
   )

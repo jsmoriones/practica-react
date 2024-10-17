@@ -1,11 +1,15 @@
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import ModalSimple from '../components/modal/modalSimple';
+import { ContextCounter } from '../context/Context';
+
 
 const Programa = () => {
   const [count, setCount] = useState(0);
   const [user, setUser] = useState({name: "", age: 0, cl: "#212121"});
   const [popup, setPopup] = useState(false);
   const [show, setShow] = useState(false);
+
+  const {increment, counter} = useContext(ContextCounter);
 
   const updateName = () => {
     const userText = document.querySelector("#first_name").value,
@@ -74,7 +78,13 @@ const Programa = () => {
         <ModalSimple show={show} setShow={setShow}>
           This is inside the modal!
         </ModalSimple>
+        <div className="block mt-10">
+          <h3 className="h3">useContext</h3>
+          <h4 className="h4">Counter useContext: {counter}</h4>
+          <button onClick={increment} className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">increment</button>
+        </div>
       </div>
+
     </>
   )
 }
