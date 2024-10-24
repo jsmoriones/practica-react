@@ -11,6 +11,7 @@ import ThemeComponent from "./components/ThemeComponent.jsx"
 import { ThemeContext } from "./context/ThemeContext.js";
 import Reducer from "./pages/Reducer.jsx"
 import LoginProvider from "./context/LoginProvider.jsx"
+import ReducerSlide from "./pages/ReducerSlide.jsx"
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path='/institucion' element={<Institucion />} />
           <Route path='/themeContext' element={<ThemeComponent />} />
           <Route path='/reducer' element={<Reducer />} />
+          <Route path='/reducer-slide' element={<ReducerSlide />} />
           <Route path="*" element={<Navigate to="/" />} /> {/*Redirecciona al inicio en caso ingresar a una ruta inexistente*/}
         </Routes>
       </div>
