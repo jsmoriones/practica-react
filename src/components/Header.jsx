@@ -33,6 +33,9 @@ const Header = () => {
                 <NavLink to="/themeContext" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>ThemeContext</NavLink>
                 <NavLink to="/reducer" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>Reducer</NavLink>
                 <NavLink to="/reducer-slide" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>Reducer Slide</NavLink>
+                <NavLink to="/todolist" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>Todolist</NavLink>
+                <NavLink to="/session" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>SessionStorage</NavLink>
+                <NavLink to="/login2" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>LoginCallbackMemo</NavLink>
             </nav>
             <div className="flex space-x-4 items-center">
                 <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button

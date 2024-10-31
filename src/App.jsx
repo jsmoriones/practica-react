@@ -12,6 +12,9 @@ import { ThemeContext } from "./context/ThemeContext.js";
 import Reducer from "./pages/Reducer.jsx"
 import LoginProvider from "./context/LoginProvider.jsx"
 import ReducerSlide from "./pages/ReducerSlide.jsx"
+import TodoList from "./pages/TodoList.jsx"
+import SessionStorage from "./pages/SessionStorage.jsx"
+import LoginMemoCallback from "./pages/LoginMemoCallback.jsx"
 
 function App() {
 
@@ -19,7 +22,7 @@ function App() {
 
   return (
     <>
-      <div style={isLightTheme ? {backgroundColor: `${themeLight.light.bg}`} : {backgroundColor: `${themeLight.dark.bg}`} }>
+      <div style={isLightTheme ? {backgroundColor: `${themeLight.light.bg}`} : {backgroundColor: `${themeLight.dark.bg}`} } className="min-h-screen">
         <Header />
         <Routes>
           <Route path='/' element={<LoginProvider />} />
@@ -30,6 +33,9 @@ function App() {
           <Route path='/themeContext' element={<ThemeComponent />} />
           <Route path='/reducer' element={<Reducer />} />
           <Route path='/reducer-slide' element={<ReducerSlide />} />
+          <Route path='/todolist' element={<TodoList />} />
+          <Route path='/session' element={<SessionStorage />} />
+          <Route path='/login2' element={<LoginMemoCallback />} />
           <Route path="*" element={<Navigate to="/" />} /> {/*Redirecciona al inicio en caso ingresar a una ruta inexistente*/}
         </Routes>
       </div>
