@@ -1,7 +1,7 @@
 import { useReducer } from "react"
-import reducer from "../reducer/reducer";
+import reducer from "./reducer";
 
-const Reducer = () => {
+const ReducerIncrement = () => {
 
   const [count, dispatch] = useReducer(reducer, 0);
 
@@ -26,4 +26,4 @@ const Reducer = () => {
   )
 }
 
-export default Reducer
+export default ReducerIncrement

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ThemeContext2 from "../context/ThemeContext2";
+import ThemeContext2 from "../context/ThemeContext2/ThemeContext2";
 
 const ChildCompoTheme2 = () => {
     const { theme, toggleTheme } = useContext(ThemeContext2);

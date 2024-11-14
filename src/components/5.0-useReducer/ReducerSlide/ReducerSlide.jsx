@@ -1,6 +1,6 @@
 import { produce } from "immer"
 
-const Reducer2 = produce((state, action) => {
+const ReducerSlide = produce((state, action) => {
     switch (action.type){
         case "INCREMENT":
             state.count = state.count + state.step;
@@ -16,4 +16,4 @@ const Reducer2 = produce((state, action) => {
     }
 })
 
-export default Reducer2
+export default ReducerSlide

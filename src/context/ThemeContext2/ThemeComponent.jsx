@@ -1,6 +1,6 @@
 import {useState} from "react";
-import ThemeContext2 from "../context/ThemeContext2";
-import ChildCompoTheme2 from "./ChildCompoTheme2";
+import ThemeContext2 from "./ThemeContext2";
+import ChildCompoTheme2 from "../../components/ChildCompoTheme2";
 
 const ThemeComponent = () => {
     const [theme, setTheme] = useState("light");

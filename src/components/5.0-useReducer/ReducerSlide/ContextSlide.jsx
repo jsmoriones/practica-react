@@ -1,8 +1,8 @@
 import {useReducer} from 'react'
-import Reducer2 from './Reducer2'
+import ReducerSlide from './ReducerSlide'
 
-const useContextReducer = () => {
-    const [state, dispatch] = useReducer(Reducer2, {count: 0, step: 1});
+const ContextSlide = () => {
+    const [state, dispatch] = useReducer(ReducerSlide, {count: 0, step: 1});
 
     const increment = () => dispatch({type: "INCREMENT"});
     const decrement = () => dispatch({type: "DECREMENT"});
@@ -21,4 +21,4 @@ const useContextReducer = () => {
     }
 }
 
-export default useContextReducer
+export default ContextSlide

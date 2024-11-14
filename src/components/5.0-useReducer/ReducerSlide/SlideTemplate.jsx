@@ -1,7 +1,7 @@
-import useContextReducer from "../reducer/useContextReducer"
+import ContextSlide from "./ContextSlide"
 
-const ReducerSlide = () => {
-    const {state, increment, decrement, handleChange} = useContextReducer();
+const SlideTemplate = () => {
+    const {state, increment, decrement, handleChange} = ContextSlide();
   return (
     <div>
         <header>
@@ -32,4 +32,4 @@ const ReducerSlide = () => {
   )
 }
 
-export default ReducerSlide
+export default SlideTemplate

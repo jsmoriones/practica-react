@@ -1,8 +1,8 @@
 import { useReducer } from "react";
-import ReducerTodoList from "./ReducerTodoList";
+import ActionTodoList from "./ActionTodoList";
 
 const TodoListReducer = () => {
-    const [state, dispatch] = useReducer(ReducerTodoList, {user: []});
+    const [state, dispatch] = useReducer(ActionTodoList, {user: []});
 
     const agregarUsuario = (data) => {
         dispatch({

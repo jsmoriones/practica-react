@@ -1,7 +1,7 @@
 import {useState} from 'react'
-import { ContextCounter } from './Context';
+import { ContextCounter } from './Counter';
 
-const StateCompo = ({children}) => {
+const StateCounter = ({children}) => {
     const [counter, setCounter] = useState(0);
 
     const increment = () => {
@@ -29,4 +29,4 @@ const StateCompo = ({children}) => {
     )
 }
 
-export default StateCompo
+export default StateCounter

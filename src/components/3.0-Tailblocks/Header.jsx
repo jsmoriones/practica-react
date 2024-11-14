@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import {NavLink} from "react-router-dom"
-import { ThemeContext } from "../context/ThemeContext.js";
+import { ThemeContext } from "../../context/ThemeContext/ThemeContext";
 
 const Header = () => {
 
@@ -31,7 +31,7 @@ const Header = () => {
                     Inistitucion
                 </NavLink>
                 <NavLink to="/themeContext" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>ThemeContext</NavLink>
-                <NavLink to="/reducer" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>Reducer</NavLink>
+                <NavLink to="/ReducerIncrement" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>ReducerIncrement</NavLink>
                 <NavLink to="/reducer-slide" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>Reducer Slide</NavLink>
                 <NavLink to="/todolist" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>Todolist</NavLink>
                 <NavLink to="/session" className={({isActive}) => isActive ? estaActivo : styleLinkNav}>SessionStorage</NavLink>

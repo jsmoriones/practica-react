@@ -1,6 +1,6 @@
 import { produce } from "immer";
 
-const ReducerTodoList = produce((state, action) => {
+const ActionTodoList = produce((state, action) => {
     switch(action.type){ //action.type es quien contiene los titulos para ejecutar el codigo
         case "AGREGAR_USUARIO":
             state.user.push(action.payload)
@@ -17,4 +17,4 @@ const ReducerTodoList = produce((state, action) => {
     }
 })
 
-export default ReducerTodoList;
+export default ActionTodoList;

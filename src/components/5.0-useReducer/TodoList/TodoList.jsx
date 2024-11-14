@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import TodoListContext from "../context/TodoListContext";
+import TodoListContext from "./TodoListContext";
 
 const TodoList = () => {
   const { agregarUsuario, mostrarUsuarios, eliminarUsuario } = useContext(TodoListContext);

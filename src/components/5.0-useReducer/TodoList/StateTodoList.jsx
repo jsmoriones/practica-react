@@ -1,5 +1,5 @@
 import TodoListContext from "./TodoListContext";
-import TodoListReducer from "../reducer/TodoListReducer"
+import TodoListReducer from "./TodoListReducer"
 
 const StateTodoList = ({children}) => {
     const { agregarUsuario, mostrarUsuarios, eliminarUsuario } = TodoListReducer();

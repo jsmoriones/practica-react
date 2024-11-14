@@ -1,6 +1,6 @@
 import { useContext } from "react"
-import { ContextCounter } from "../context/Context";
-import LoginContext from "../context/LoginContext";
+import { ContextCounter } from "../../../context/CounterContext/Counter";
+import LoginContext from "./LoginContext";
 
 const Inicio = () => {
 

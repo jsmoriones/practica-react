@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from "react-router-dom"
-import StateCompo from './context/StateCompo.jsx'
-import StateAuth from './context/StateAuth.jsx'
-import StateTheme from './context/StateTheme.jsx'
-import StateTodoList from './context/StateTodoList.jsx'
+import StateCompo from './context/CounterContext/StateCounter.jsx'
+import StateAuth from './context/AuthBasic/StateAuth.jsx'
+import StateTheme from './context/ThemeContext/StateTheme.jsx'
+import StateTodoList from './components/5.0-useReducer/TodoList/StateTodoList.jsx'
 import './index.css'
 import App from "./App.jsx"
 

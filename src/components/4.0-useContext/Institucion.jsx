@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react"
-import { ContextCounter } from "../context/Context";
-import { AuthContext } from "../context/AuthContext";
-import { ThemeContext } from "../context/ThemeContext.js";
+import { ContextCounter } from "../../context/CounterContext/Counter.js";
+import { AuthContext } from "../../context/AuthBasic/AuthContext.js";
+import { ThemeContext } from "../../context/ThemeContext/ThemeContext.js";
 const Institucion = () => {
   const [query, setQuery] = useState("");
   const [invocation, setInvocation] = useState(1);
