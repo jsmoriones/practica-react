@@ -7,7 +7,7 @@ const SuccessAuthTemplated = ({funcNav}) => {
 
   useEffect(() => {
     funcNav(false)
-  }, []);
+  }, [ ]);
 
   useEffect(() => {
     if( !JSON.parse( sessionStorage.getItem('userLogued') ) ){
