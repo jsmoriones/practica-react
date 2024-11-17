@@ -23,6 +23,7 @@ import TemplatedAccess from "./components/Taller/AccessLoginAuth/TemplatedAccess
 import { RegisterProvider } from "./components/Taller/AccessLoginAuth/registerReducer"
 import { AuthenticationProvider } from "./components/Taller/AccessLoginAuth/authenticationReducer"
 import SuccessAuthTemplated from "./components/Taller/AccessLoginAuth/SuccessAuthTemplated"
+import SiteNews from "./components/Taller/AccessLoginAuth/site/SiteNews"
 /*import LoginMemoCallback from "./pages/LoginMemoCallback.jsx"*/
 
 function App() {
@@ -57,8 +58,13 @@ function App() {
           } />
           <Route path="/success-auth" element={
             <RegisterProvider>
-              <SuccessAuthTemplated funcNav={setShowNav} />
+              <AuthenticationProvider>
+                <SuccessAuthTemplated funcNav={setShowNav} />
+              </AuthenticationProvider>
             </RegisterProvider>
+          } />
+          <Route path="/site-news" element={
+              <SiteNews funcNav={setShowNav} />
           } />
           <Route path="*" element={<Navigate to="/" />} /> {/*Redirecciona al inicio en caso ingresar a una ruta inexistente*/}
         </Routes>

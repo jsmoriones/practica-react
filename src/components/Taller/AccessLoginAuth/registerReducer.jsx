@@ -56,6 +56,8 @@ export const RegisterProvider = ({children}) => {
     });
   }
 
+  
+
   const value = {
     addUser,
     listUsers,
